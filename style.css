@@ -1,0 +1,110 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    cursor: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body{
+    background-image: url(./assets/backgroundimage\ 1.jpg);
+    background-size: cover;
+    background-color: rgb(114, 68, 157);
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+}
+.heading{
+    font-size: 2em;
+    margin: 1em 0;
+    text-align: center;
+}
+.score{
+    font-size: 2em;
+    margin: 1em 0;
+    text-align: center;
+}
+.holesCont{
+display: grid;
+grid-template-columns: repeat(3,1fr);
+justify-content: center;
+}
+.hole{
+    position:relative;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    background-color: azure;
+    margin: 6px;
+    overflow: hidden;
+}
+.mole{
+    position: absolute;
+    z-index: 1;
+    height: 60px;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    animation: appear 0.3s linear;
+    pointer-events: none;
+}
+
+@keyframes appear {
+    from {
+bottom: -60px;
+    }
+    to{
+        bottom: 0;
+    }
+}
+.buttons{
+    margin-top: 3em;
+    text-align: center;
+}
+.buttons button{
+    padding: 15px 45px;
+    background-color: inherit;
+    border: 1px solid wheat;
+    color: wheat;
+    border-radius: 3px;
+    outline: none;
+}
+button.stop{
+    display: none;
+}
+.cursor img{
+    position: absolute;
+    height: 125px;
+    z-index: 2;
+    transform: translate(-10px,-40px);
+    pointer-events: none;
+}
+@keyframes hit{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(-30deg);
+    }
+}
+.btn{
+    padding: 20px 30px;
+    background-color: var(--color);
+    border: 2px solid plum;
+    border-radius: 10%;
+}
+.btnn{
+    display: flex;
+    margin-top: 30px;
+}
+
+    
+    
+
+.btn-1 {--color:red;}
+.btn-2 {--color:blue;}
+.btn-3 {--color:purple;}
+.btn-4 {--color:teal;}
+.btn-5 {--color:orange;}
+.btn-6 {--color:pink;}
+.btn-7 {--color:black;}
+.btn-8 {--color:green;}
